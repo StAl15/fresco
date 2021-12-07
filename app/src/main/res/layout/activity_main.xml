@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         app:labelVisibilityMode="selected"
+        app:itemTextColor="@color/black"
         android:background="@drawable/rect_back_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

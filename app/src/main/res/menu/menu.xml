@@ -3,18 +3,17 @@
 
 
     <item
-        android:id="@+id/home_"
+        android:id="@+id/home"
         android:title="Главная"
         android:icon="@drawable/ic_home"
-        android:iconTint="@color/blue"
         />
     <item
-        android:id="@+id/messages_"
+        android:id="@+id/messages"
         android:title="Сообщения"
         android:icon="@drawable/ic_message"
         />
     <item
-        android:id="@+id/settings_"
+        android:id="@+id/settings"
         android:title="Настройки"
         android:icon="@drawable/ic_settings"
         />
