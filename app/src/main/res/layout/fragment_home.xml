@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ScrollView>
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="@dimen/_175sdp"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_165sdp"
         android:layout_marginTop="@dimen/_40sdp"
         android:foreground="@drawable/img1"
+        android:outlineSpotShadowColor="@color/white"
         app:cardCornerRadius="@dimen/_100sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
