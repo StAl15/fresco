@@ -6,16 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".home">
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Это действительно хороший вопрос. Пожалуй я тебе понадоблюсь, только, чтобы очистить карму)"
+        android:gravity="center"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </ScrollView>
-
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -58,23 +63,36 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_20sdp"
-        android:orientation="vertical"
         android:background="@color/blue"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" >
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
         <TextView
+            android:id="@+id/txt_why"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="И зачем ты мне нужен?"
-            android:textColor="@color/white"
-            android:fontFamily="@font/lato"
-            android:textSize="@dimen/_20ssp"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_13sdp"
-            />
+            android:fontFamily="@font/lato"
+            android:text="И зачем ты мне нужен?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp" />
     </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:src="@drawable/img2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,17 @@
 package com.example.fresco
 
+import android.graphics.Color
+import android.graphics.ColorFilter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import com.example.fresco.R
+import com.google.android.material.snackbar.Snackbar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,37 +30,36 @@ class home : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val txt_why: TextView = view.findViewById(R.id.txt_why)
+        txt_why.setOnClickListener {
+            Snackbar.make(it, "А вот зачем", Snackbar.LENGTH_SHORT).show()
+        }
+        val txt_name: TextView = view.findViewById(R.id.textView)
+        txt_name.setOnClickListener {
+            Snackbar.make(it, "Красавчик", Snackbar.LENGTH_SHORT).show()
+        }
+        val txt_ava: CardView = view.findViewById(R.id.cardView)
+        txt_ava.setOnClickListener {
+            Snackbar.make(it, "Что может быть лучше", Snackbar.LENGTH_SHORT).show()
+        }
+        val ll_blue: LinearLayout = view.findViewById(R.id.linearLayout)
+        ll_blue.setOnClickListener {
+            Snackbar.make(it, "А вот так меняется", Snackbar.LENGTH_SHORT).show()
+            ll_blue.background.setTint(Color.GREEN)
+        }
+        //Антон, ты заебал смотреть мои коммиты.
+        // Я ведь такими темпами буду делать онли приватные репы или постить еще большую хуйню)
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment home.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            home().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
