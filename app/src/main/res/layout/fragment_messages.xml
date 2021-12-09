@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".messages">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Здесь можешь мне написать свой таск"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:ems="10"
+        android:drawableRight="@drawable/ic_message"
+        android:drawableTint="@color/blue"
+        android:paddingRight="@dimen/_7sdp"
+        android:inputType="textPersonName"
+        android:hint="Твой таск красавчик..."
+        android:textColorHint="@color/black"
+        android:paddingStart="@dimen/_7sdp"
+        android:background="@drawable/rect_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:background="@drawable/rect_"
+        android:text="Ща кину"
+        android:drawableRight="@drawable/ic_message"
+        android:drawableTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
