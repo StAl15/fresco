@@ -63,3 +63,34 @@ class home : Fragment() {
 
 
 }
+/*
+button.read.setOnClickListener{
+  If (it.view == requireContext() ) {
+      Toast.makeText(requireContext(), "fuck",Toast.LengthShort) 
+
+    }else{
+      Val uid = user.id
+      Val emails = user. Emails
+      Val quality = user. Quantity
+      sendMessage (uid, emails, quantity) 
+}
+fun send msg(uid, emails,quantity) {
+   SendMessage = sendMessage (uid, emails, quantity) 
+return SendMessage
+}
+val view = inflater.inflate(R.layout.fragment_home, container, false) 
+val txt_why: TextView = view.findViewById(R.id.txt_why) 
+txt_why.setOnClickListener { 
+Snackbar.make(it, "А вот зачем", Snackbar.LENGTH_SHORT).show() }
+ val txt_name: TextView = view.findViewById(R.id.textView) 
+txt_name.setOnClickListener { 
+Snackbar.make(it, "Красавчик", Snackbar.LENGTH_SHORT).show() } 
+val txt_ava: CardView = view.findViewById(R.id.cardView) 
+txt_ava.setOnClickListener { 
+Snackbar.make(it, "Что может быть лучше", Snackbar.LENGTH_SHORT).show() } 
+val ll_blue: LinearLayout = view.findViewById(R.id.linearLayout)
+ ll_blue.setOnClickListener { Snackbar.make(it, "А вот так меняется", Snackbar.LENGTH_SHORT).show()
+ ll_blue.background.setTint(Color.GREEN) 
+ return view
+}
+*/
